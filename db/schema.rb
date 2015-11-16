@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20151116231133) do
     t.datetime "updated_at"
   end
 
-  add_index "contact_shares", ["contact_id"], name: "index_contact_shares_on_contact_id", unique: true
-  add_index "contact_shares", ["user_id"], name: "index_contact_shares_on_user_id"
+  add_index "contact_shares", ["contact_id"], name: "index_contact_shares_on_contact_id"
+  add_index "contact_shares", ["user_id", "contact_id"], name: "index_contact_shares_on_user_id_and_contact_id", unique: true
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name",       null: false
