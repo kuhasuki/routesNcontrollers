@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   private
 
   def dem_paramz
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:username)
   end
 
 end
