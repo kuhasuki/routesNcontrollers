@@ -7,9 +7,9 @@ class ContactShare < ActiveRecord::Base
     foreign_key: :user_id,
     class_name: 'User'
 
-  belongs_to :contact
+  belongs_to :contact,
     primary_key: :id,
     foreign_key: :contact_id,
-    class_name: 'Contact'  
+    class_name: 'Contact'
 
 end
